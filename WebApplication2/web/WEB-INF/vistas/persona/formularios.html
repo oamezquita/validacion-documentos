@@ -1,0 +1,134 @@
+
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script src="../../../../js/libs/jquery-1.9.0/jquery.min.js"></script>
+        <script src="../../../../js/libs/jquery-validate-1.10.0/jquery.validate.min.js"></script>
+        <style>
+            .error
+            {
+                color:red
+                    
+            }
+            input.error
+            {
+                background-color: #cccccc
+            }
+            
+        </style> 
+        </head>
+        <body>
+        <div><font color="black" size="6" face="Comic Sans MS, Arial, MS Sans Serif">Informacion Persona</font></div>
+        <form  id="form1" name="formularios" >
+              
+            
+            <br>
+            Nombre:  <input type="text" name="nombre" value="" >
+          
+        
+            <br>
+            <br>
+            Apellido:  <input type="text" name="apellido" value="">  
+         
+        <br>
+        <br>
+        <font color="black" size="4" face="Comic Sans MS, Arial, MS Sans Serif">seleccione tipo de documento:</font>  <br><br>
+        <select name="Documen" >
+                <option>tarjeta de identidad</option>
+                <option>cedula</option>
+                <option>registro de nacimiento</option>
+            </select>
+        <br>
+        <font color="black" size="4" face="Comic Sans MS, Arial, MS Sans Serif">Genero</font>
+                
+       <br>     
+     
+       <input type="radio" name="genero"  value="femenino" />Femenino    
+       <input type="radio" name="genero" value="masculino" />Masculino
+      
+       <font color="black" size="4" face="Comic Sans MS, Arial, MS Sans Serif"><br>Seleccione las opciones </font>
+       <br>  
+            <br>Estudia   <input type="checkbox" name="opcion" value="estudia" >
+            <br>Trabaja <input type="checkbox" name="opcion" value="trabaja" >
+            <br>Programa <input type="checkbox" name="opcion" value="programa" >        
+            <br>Pensionado <input type="checkbox" name="opcion" value="pensionado" >      
+            <br>Independiente <input type="checkbox" name="opcion" value="independiente" >
+            
+            <br>
+            <br>
+            <input type="date" name="fnacimiento">
+            
+            <input type="submit" value="Aceptar" name="aceptar" >
+          
+        </form>
+        <ul id="messagebox"></ul>
+        <script>
+             $("#form1").validate(                
+        
+        {
+    errorLabelContainer:"#messagebox",
+    wrapper:"li",
+         rules:
+                 {
+                  nombre:
+             {
+         required: true
+             
+            },
+             apellido:
+                     {
+                 required: true,
+                 
+            },
+                     documen:
+                             {
+                         required: true
+                         },
+             opcion:
+                     {
+                 required: true
+                     },
+                     genero:{
+                         required:true
+                     },
+        fnacimiento:{
+            required:true
+        }         
+        },
+                 messages:
+                         {
+                     nombre:{
+                         required: "por favor digite su nombre",
+                         
+            },
+                     apellido:
+                             {
+                         required:"porfavor digite su apellido"
+                             },
+                             documen:
+                             {
+                         required: "por favor seleccione una opcion"
+                         },
+                         opcion:
+                             {
+                         required: "por favor seleccione una opcion"
+                         },
+                         genero:{
+                             required:"por favor seleccione su genero"
+                         },
+                         fnacimiento:{
+                          required:"seleccione su fecha de nacimiento"
+                                     }         
+                     
+                     }                         
+                         }
+           );          
+                     
+                 
+    
+        
+        
+        </script>
+    </body>
+</html>

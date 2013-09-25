@@ -1,0 +1,61 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <div><font color="black" size="6" face="Comic Sans MS, Arial, MS Sans Serif">Informacion Persona</font></div>
+        <form method="post" name="formularios" action="Persona?a=guardar">
+              
+            
+            <br>
+            Nombre:  <input type="text" name="nombre" value="" >
+          
+        
+           
+
+          Apellido:  <input type="text" name="apellido" value="">  
+         
+        <br>
+        <br>
+        <font color="black" size="4" face="Comic Sans MS, Arial, MS Sans Serif">seleccione tipo de documento:</font>  <br><br>
+            <select name="tipo Documento">
+                <option>tarjeta de identidad</option>
+                <option>cedula</option>
+                <option>registro de nacimiento</option>
+            </select>
+        <br>
+        <font color="black" size="4" face="Comic Sans MS, Arial, MS Sans Serif">Genero</font>
+                
+       <br>     
+       <input type="radio" name="genero" value="femenino" >Femenino<br>
+       <input type="radio" name="genero" value="masculino" >Masculino
+       <br>
+       <font color="black" size="4" face="Comic Sans MS, Arial, MS Sans Serif">Seleccione las opciones </font>
+            
+       <br>Estudia   <input type="checkbox" name="opcion[]" value="estudia" >
+            <br>Trabaja <input type="checkbox" name="opcion[]" value="trabaja" >
+            <br>Programa <input type="checkbox" name="opcion[]" value="programa" >        
+            <br>Pensionado <input type="checkbox" name="opcion[]" value="pensionado" >      
+            <br>Independiente <input type="checkbox" name="opcion[]" value="independiente" >
+        
+          
+           
+            
+            <br>
+            <br>
+            <input type="date" name="fnacimiento">
+            
+            <input type="submit" value="Aceptar" name="aceptar" />
+          
+         
+        
+        
+        </form>
+    </body>
+</html>
